@@ -15,7 +15,17 @@ public class CompteBancari {
         // Aquest mètode ara pot llançar diferents tipus d'excepcions segons l'error detectat.
 
     }
+    private boolean validarId(String s) throws  LongitudInvalidaException{
+        if (s.length()!=24){
+            throw  new LongitudInvalidaException("no es 24") ;
+        }
 
+        for (int i = 0; i < s.length()-2; i++) {
+
+        }
+        if ((s.charAt(0) != 'E' && s.charAt(1) !='S') ||)
+
+    }
     // TODO 1.9: Crea un mètode PRIVAT anomenat 'validarID' que rebi un String i retorni un boolean.
     // Implementa la validació real llançant l'excepció específica en cada cas:
     // 1. Si la longitud no és 24 -> llança LongitudInvalidaException.
