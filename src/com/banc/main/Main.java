@@ -1,8 +1,6 @@
 package com.banc.main;
 
-import com.banc.core.BancException;
-import com.banc.core.CompteBancari;
-import com.banc.core.Auditor;
+import com.banc.core.*;
 import com.banc.especial.CompteEstalvi;
 import com.banc.model.Client;
 import com.banc.repository.BancRepository;
@@ -36,8 +34,14 @@ public class Main {
           // Comprova què et diu el compilador i raona per què passa això.
 
           // TODO 4.3: Comprova quins altres mètodes i atributs són visibles i quins donen error de compilació.
-      } catch (Exception e) {
-          throw new RuntimeException(e);
+      } catch (DigitsControlInvalidsException e) {
+          System.out.println("digits de control error");
+      } catch (FormatInvalidException e){
+          System.out.println("format invalid");
+      }catch (LongitudInvalidaException e){
+          System.out.println("longitud invalid");
+      } catch (BancException e){
+          System.out.println("error banco");
       }
 
     }
